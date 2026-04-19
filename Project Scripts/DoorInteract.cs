@@ -26,7 +26,7 @@ public class DoorInteract : Interactable
     {
         playerCarry = FindObjectOfType<PlayerCarrySystem>();
 
-        // 🔥 AUTO SET AUDIO SOURCE (NO NEED TO DRAG)
+        //  AUTO SET AUDIO SOURCE (NO NEED TO DRAG)
         audioSource = GetComponent<AudioSource>();
 
         if (audioSource == null)
@@ -42,7 +42,7 @@ public class DoorInteract : Interactable
     {
         if (isMoving) return;
 
-        // 🔐 LOCK SYSTEM
+        //  LOCK SYSTEM
         if (isLocked)
         {
             if (playerCarry == null || playerCarry.carriedObject == null)
@@ -76,7 +76,7 @@ public class DoorInteract : Interactable
 
         float direction = isOpen ? -openAngle : openAngle;
 
-        // 🔊 PLAY SOUND
+        //  PLAY SOUND
         if (!isOpen)
             PlaySound(openSound);
         else
